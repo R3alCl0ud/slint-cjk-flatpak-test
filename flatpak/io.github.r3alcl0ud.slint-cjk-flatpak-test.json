@@ -1,0 +1,45 @@
+{
+    "app-id": "io.github.r3alcl0ud.slint-cjk-flatpak-test",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "24.08",
+    "separate-locales": false,
+    "sdk": "org.freedesktop.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable",
+        "org.freedesktop.Sdk.Locale"
+    ],
+    "command": "slint-cjk-flatpak-test",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=host",
+        "--share=network"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "env": {
+            "DEPLOY": "1",
+            "CARGO_HOME": "/run/build/slint-cjk-flatpak-test/cargo"
+        }
+    },
+    "modules": [
+        {
+            "name": "slint-cjk-flatpak-test",
+            "buildsystem": "simple",
+            "build-commands": [
+                "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+                "cargo --offline build --release --verbose",
+                "install -Dm755 ./target/release/slint-cjk-flatpak-test -t /app/bin/"
+            ],
+            "sources": [
+                {
+                    "type": "dir",
+                    "path":".."
+                },
+                "slint-cjk-flatpak-test-sources.json"
+            ]
+        }
+    ]
+}

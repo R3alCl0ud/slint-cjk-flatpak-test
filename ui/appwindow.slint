@@ -1,0 +1,12 @@
+import "./fonts/NotoSerifCJK-VF.ttf.ttc";
+import "./fonts/NotoSansCJK-VF.ttf.ttc";
+import "./fonts/NotoSansMonoCJK-VF.ttf.ttc";
+ 
+export component App inherits Window {
+    min-width: 300px;
+    min-height: 100px;
+    default-font-family: "Noto Sans";
+    Text {
+        text: "これはテキストと漢字"; // displays as boxes
+    }
+}
