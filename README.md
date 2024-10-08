@@ -6,5 +6,6 @@ Repo containing the smallest version of this bug
 ```bash
 cd flatpak
 ./build-flatpak.sh
-flatpak run io.github.r3alcl0ud.slint-cjk-flatpak-test
+./run-winit-backend.sh # glyphs do not render properly
+./run-qt-backend.sh # glyphs render properly
 ```

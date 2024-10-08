@@ -1,13 +1,9 @@
 {
     "app-id": "io.github.r3alcl0ud.slint-cjk-flatpak-test",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.7",
     "separate-locales": false,
-    "sdk": "org.freedesktop.Sdk",
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.rust-stable",
-        "org.freedesktop.Sdk.Locale"
-    ],
+    "sdk": "org.kde.Sdk",
     "command": "slint-cjk-flatpak-test",
     "finish-args": [
         "--share=ipc",

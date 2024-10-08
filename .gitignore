@@ -3,3 +3,5 @@
 flatpak/.flatpak-builder/
 
 flatpak/slint-test-repo/
+
+flatpak/slint-cjk-flatpak-test.flatpak

@@ -1,0 +1,1 @@
+flatpak --env="SLINT_BACKEND=qt" run io.github.r3alcl0ud.slint-cjk-flatpak-test
