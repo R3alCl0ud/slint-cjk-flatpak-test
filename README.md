@@ -1,0 +1,1 @@
+# slint-cjk-flatpak-test
